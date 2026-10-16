@@ -78,7 +78,48 @@ def probar_ordenamiento():
 # ------------------------------------------------------------
 # MENÚ PRINCIPAL Y PRUEBAS
 # Autor: Anthony Rene Terraz Terrones
-# PEGA AQUÍ TU CÓDIGO (main, menú, pruebas)
+#------------------------------------------------------------
+def mostrar_menu():
+    print("\n" + "=" * 45)
+    print("   LABORATORIO N° 3 - ARREGLOS Y LISTAS")
+    print("=" * 45)
+    print("1. Etapa 1: Listas unidimensionales")
+    print("2. Etapa 2: Matriz 3x3")
+    print("3. Etapa 3: Operaciones sobre listas")
+    print("4. Etapa 4: Algoritmos de ordenamiento")
+    print("5. Salir")
+    print("=" * 45)
+
+def main():
+    opcion = ""
+    while opcion != "5":
+        mostrar_menu()
+        opcion = input("Seleccione una opción: ").strip()
+
+        if opcion == "1":
+            lista = declarar_lista()
+            recorrer_lista(lista)
+            modificar_elemento(lista)
+            buscar_elemento(lista)
+        elif opcion == "2":
+            matriz = llenar_matriz()
+            mostrar_matriz(matriz)
+            sumar_matriz(matriz)
+        elif opcion == "3":
+            lista = [10, 20, 30]
+            insertar_elemento(lista)
+            eliminar_elemento(lista)
+            buscar_valor(lista)
+            mostrar_lista(lista)
+        elif opcion == "4":
+            probar_ordenamiento()
+        elif opcion == "5":
+            print("\nSaliendo del sistema.")
+        else:
+            print("\nOpción inválida.")
+
+if __name__ == "__main__":
+    main()
 # ------------------------------------------------------------
 
 
