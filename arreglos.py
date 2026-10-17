@@ -12,6 +12,29 @@
 # PEGA AQUÍ TU CÓDIGO (declarar, recorrer, modificar, buscar)
 # ------------------------------------------------------------
 
+def declarar_lista():
+    return [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+
+def recorrer_lista(lista):
+    print("\nElementos de la lista:")
+    for i, num in enumerate(lista):
+        print(f"  [{i}] = {num}")
+
+
+def modificar_elemento(lista):
+    nuevo = int(input("Ingrese nuevo valor para el tercer elemento: "))
+    lista[2] = nuevo
+    print(f"Elemento modificado. Lista actual: {lista}")
+
+
+def buscar_elemento(lista):
+    num = int(input("Ingrese número a buscar: "))
+    if num in lista:
+        print(f"El número {num} SÍ existe en la lista.")
+    else:
+        print(f"El número {num} NO existe en la lista.")
+
 
 
 # ------------------------------------------------------------
