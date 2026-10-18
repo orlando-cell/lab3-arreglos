@@ -42,6 +42,29 @@ def buscar_elemento(lista):
 # Autor: Álvaro Leandro Gutiérrez Carranza
 # PEGA AQUÍ TU CÓDIGO (llenar, mostrar, sumar matriz)
 # ------------------------------------------------------------
+def llenar_matriz():
+    matriz = []
+    print("\n  Ingrese los valores de la matriz 3x3:")
+    for i in range(3):
+        fila = []
+        for j in range(3):
+            valor = int(input(f"    Posición [{i}][{j}]: "))
+            fila.append(valor)
+        matriz.append(fila)
+    return matriz
+
+def mostrar_matriz(matriz):
+    print("\n  Matriz 3x3:")
+    for fila in matriz:
+        print("   ", fila)
+
+def sumar_matriz(matriz):
+    suma = 0
+    for fila in matriz:
+        for valor in fila:
+            suma += valor
+    print(f"\n  Suma total de los elementos: {suma}")
+    return suma
 
 
 
