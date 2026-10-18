@@ -9,7 +9,6 @@
 # ------------------------------------------------------------
 # ETAPA 1: LISTAS UNIDIMENSIONALES
 # Autor: Cristian Omar Huamán Rojas
-# PEGA AQUÍ TU CÓDIGO (declarar, recorrer, modificar, buscar)
 # ------------------------------------------------------------
 
 def declarar_lista():
@@ -40,7 +39,6 @@ def buscar_elemento(lista):
 # ------------------------------------------------------------
 # ETAPA 2: MATRIZ 3x3
 # Autor: Álvaro Leandro Gutiérrez Carranza
-# PEGA AQUÍ TU CÓDIGO (llenar, mostrar, sumar matriz)
 # ------------------------------------------------------------
 def llenar_matriz():
     matriz = []
@@ -71,10 +69,30 @@ def sumar_matriz(matriz):
 # ------------------------------------------------------------
 # ETAPA 3: OPERACIONES SOBRE LISTAS
 # Autor: Zinedine Michael Callirgos Cabanillas
-# PEGA AQUÍ TU CÓDIGO (insertar, eliminar, buscar, mostrar)
 # ------------------------------------------------------------
 
+def insertar_elemento(lista):
+    valor = int(input("  Ingrese valor a insertar: "))
+    lista.append(valor)
+    print(f"Elemento insertado. Lista actual: {lista}")
 
+def eliminar_elemento(lista):
+    pos = int(input("  Ingrese posición a eliminar: "))
+    if 0 <= pos < len(lista):
+        eliminado = lista.pop(pos)
+        print(f"Elemento '{eliminado}' eliminado. Lista actual: {lista}")
+    else:
+        print("Posición inválida.")
+
+def buscar_valor(lista):
+    valor = int(input("  Ingrese valor a buscar: "))
+    if valor in lista:
+        print(f" El valor {valor} está en la posición {lista.index(valor)}.")
+    else:
+        print(f"El valor {valor} no se encuentra en la lista.")
+
+def mostrar_lista(lista):
+    print(f"\n  Lista actual: {lista}")
 
 # ============================================================
 # Etapa 4: Algoritmos de Ordenamiento
